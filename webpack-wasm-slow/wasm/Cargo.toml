@@ -1,0 +1,15 @@
+[package]
+name = "wasm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+bevy = ">=0.9"
+wasm-bindgen = { version = "0.2.84" }
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
